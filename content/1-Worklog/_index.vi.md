@@ -8,7 +8,8 @@ pre: " <b> 1. </b> "
 
 Thông thường và cũng là tiêu chuẩn, một worklog được thực hiện trong khoảng 3 tháng (trong suốt thời gian thực tập) với nội dung các tuần như sau:
 
-**Tuần 1:** [Làm quen với AWS và các dịch vụ cơ bản trong AWS](1.1-week1/)
+**Tuần 1:** 
+[Làm quen với AWS và các dịch vụ cơ bản trong AWS](1.1-week1/)
 
 **Tuần 2:** [Nghiên cứu và thực hành triển khai các dịch vụ hạ tầng cốt lõi của AWS, bao gồm thiết kế mạng VPC, quản lý máy chủ EC2 và thiết lập kết nối Site-to-Site VPN](1.2-week2/)
 
