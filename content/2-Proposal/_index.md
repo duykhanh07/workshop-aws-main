@@ -30,7 +30,7 @@ Reduce a lot of time writing cover letters and editing CVs. Leverage AWS Free Ti
 ### 3. Solution Architecture  
 The platform applies a fully AWS Serverless architecture to optimize scalability and maintenance costs. The user interface is distributed globally through Amazon CloudFront and S3. The backend system uses Microservices architecture with AWS Lambda (Java Spring Cloud Function) to handle business logic and Amazon Bedrock to integrate artificial intelligence. Profile and assessment data is centrally managed by Amazon DynamoDB, ensuring high performance and security.  
 
-![AI Career Coach Architecture](/static/images/2-Proposal/AI_Career_Coach_Architecture.png)
+![AI Career Coach Architecture](/images/2-Proposal/AI_Career_Coach_Architecture.png)
 
 *AWS Services Used*
 - *Amazon CloudFront & S3*: Store and distribute Web interface (Next.js) with low latency.

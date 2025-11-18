@@ -1,5 +1,5 @@
 ---
-title: "Week 7 Worklog"
+title: "Worklog Week 7"
 #date: "`r Sys.Date()`"
 weight: 1
 chapter: false
