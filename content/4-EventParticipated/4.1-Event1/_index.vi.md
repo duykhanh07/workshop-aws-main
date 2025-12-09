@@ -6,120 +6,83 @@ chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# Báo cáo tổng kết: “AWS First Cloud Journey Workforce OJT Fall 2025 Kick-off”
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+### Mục tiêu sự kiện
 
-### Mục Đích Của Sự Kiện
+- Khởi động chương trình **AWS First Cloud Journey Workforce OJT Fall 2025**  
+- Giúp sinh viên tiếp cận môi trường làm việc chuẩn quốc tế  
+- Chia sẻ các thực tiễn tốt nhất về **Cloud, DevOps, AI/ML, Security, Data & Analytics**  
+- Kết nối sinh viên với chuyên gia AWS, cựu sinh viên và các doanh nghiệp đối tác  
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+### Diễn giả
 
-### Danh Sách Diễn Giả
+- **Nguyễn Trần Phước Bảo** – Trưởng phòng Quan hệ Doanh nghiệp, Đại học FPT  
+- **Nguyễn Gia Hưng** – Head of Solutions Architect, AWS Vietnam  
+- **Đỗ Huy Thắng** – DevOps Lead, VNG  
+- **Danh Hoàng Hiếu Nghị** – GenAI Engineer, Renova  
+- **Bùi Hồ Linh Nhi** – AI Engineer, SoftwareOne  
+- **Phạm Nguyễn Hải Anh** – Cloud Engineer, G-Asia Pacific  
+- **Nguyễn Đồng Thanh Hiệp** – Principal Cloud Engineer, G-Asia Pacific  
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+### Điểm nhấn chính
 
-### Nội Dung Nổi Bật
+#### Ý nghĩa của buổi Kick-off OJT
+- Đánh dấu sự khởi đầu chính thức của chương trình **OJT Fall 2025** tại AWS Bitexco Financial Tower  
+- Mang đến cho sinh viên cơ hội **học hỏi, thực hành và phát triển** trong môi trường chuyên nghiệp  
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+#### Chia sẻ từ chuyên gia
+- **Nguyễn Gia Hưng**: Giới thiệu tổng quan về OJT tại AWS và đưa ra nhiều lời khuyên nghề nghiệp quý báu  
+- **Đỗ Huy Thắng**: Bài nói chuyện truyền cảm hứng về **DevOps**, nhấn mạnh tiềm năng phát triển tại Việt Nam và quốc tế  
+- Các cựu sinh viên: Chia sẻ trải nghiệm thực tế, tiếp thêm động lực để sinh viên tự tin bước vào kỳ OJT  
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+#### Thông tin chương trình
+- Khởi động từ **2021**, đã đồng hành cùng hơn **2.000 sinh viên trên toàn quốc**  
+- Hơn **150 học viên** hiện đang làm việc tại các công ty công nghệ hàng đầu trong và ngoài nước  
+- Sứ mệnh: Xây dựng thế hệ **AWS Builders** chất lượng cao cho Việt Nam  
+- Kết nối sinh viên với **AWS Study Group (47.000+ thành viên)** và các doanh nghiệp đối tác  
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+### Bài học rút ra
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+#### Lợi ích cho sinh viên
+- Trải nghiệm thực tế về **Cloud, DevOps, AI/ML, Security, Data & Analytics**  
+- Học hỏi phong cách làm việc chuyên nghiệp theo chuẩn quốc tế  
+- Mở rộng mạng lưới với chuyên gia AWS, cựu sinh viên và doanh nghiệp  
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+#### Phát triển sự nghiệp
+- Tiếp cận **case study thực tế** và các thực tiễn tốt nhất trong ngành  
+- Cơ hội gia nhập các công ty công nghệ hàng đầu sau khi tốt nghiệp  
+- Khuyến khích tư duy **growth mindset** và học tập liên tục  
 
-#### Domain-Driven Design (DDD)
+### Ứng dụng vào công việc
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+- **Thực hành kỹ năng Cloud** qua các dự án OJT tại AWS  
+- **Khám phá DevOps** như một hướng đi nghề nghiệp toàn cầu  
+- **Tận dụng kinh nghiệm từ cựu sinh viên** để chuẩn bị cho môi trường làm việc thực tế  
+- **Tham gia AWS Study Group** để học hỏi và kết nối lâu dài  
 
-#### Event-Driven Architecture
+### Trải nghiệm sự kiện
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+Tham dự **AWS First Cloud Journey Workforce OJT Fall 2025 Kick-off** mang lại nhiều cảm hứng cho sinh viên. Các trải nghiệm nổi bật:
 
-#### Compute Evolution
+#### Học hỏi từ chuyên gia
+- Nhận được lời khuyên thực tiễn từ kiến trúc sư AWS và lãnh đạo ngành  
+- Hiểu rõ hơn về DevOps và cơ hội nghề nghiệp rộng mở  
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+#### Trải nghiệm thực tế
+- Nhận thức rõ tầm quan trọng của **kỹ năng mềm** bên cạnh chuyên môn  
+- Học cách thích nghi với môi trường làm việc chuẩn quốc tế  
 
-#### Amazon Q Developer
-
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
-
-### Những Gì Học Được
-
-#### Tư Duy Thiết Kế
-
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
-
-#### Kiến Trúc Kỹ Thuật
-
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
-
-#### Chiến Lược Hiện Đại Hóa
-
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
-
-### Ứng Dụng Vào Công Việc
-
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
-
-### Trải nghiệm trong event
-
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
-
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
-
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
-
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
-
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
+#### Mạng lưới kết nối
+- Giao lưu trực tiếp với cựu sinh viên chia sẻ trải nghiệm OJT chân thực  
+- Xây dựng mối quan hệ với chuyên gia AWS và doanh nghiệp đối tác  
 
 #### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
+- OJT không chỉ là đào tạo kỹ thuật mà còn là **phát triển bản thân**  
+- Sự hợp tác giữa trường và doanh nghiệp mở ra con đường sự nghiệp vững chắc  
+- Với tư duy đúng đắn, sinh viên có thể đạt được **thành công ý nghĩa** trong ngành công nghệ  
 
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+#### Một số hình ảnh sự kiện
+*Thêm hình ảnh sự kiện tại đây*  
+
+> Tổng thể, buổi Kick-off không chỉ mang lại kiến thức kỹ thuật mà còn truyền cảm hứng, giúp sinh viên Đại học FPT tự tin bắt đầu hành trình OJT với khát vọng và sự chuẩn bị vững chắc.

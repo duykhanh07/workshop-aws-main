@@ -34,18 +34,18 @@ Nền tảng áp dụng kiến trúc AWS Serverless hoàn toàn (Full Serverless
 ![AI Career Coach Architecture](/images/2-Proposal/AI_Career_Coach_Architecture.png)
 
 *Dịch vụ AWS sử dụng*
-- *Amazon CloudFront & S3*: Lưu trữ và phân phối giao diện Web (Next.js) với độ trễ thấp.
+- *Amazon CloudFront & S3*: Lưu trữ và phân phối giao diện Web với độ trễ thấp.
 - *Amazon Cognito*: Quản lý định danh, đăng ký/đăng nhập và xác thực người dùng an toàn.
 - *Amazon API Gateway*: Cổng REST API quản lý traffic và định tuyến yêu cầu đến đúng Lambda Service.
-- *AWS Lambda*: Xử lý logic nghiệp vụ (4 services: User, Resume, Cover Letter, Interview) trên môi trường Java Spring.
-- *Amazon DynamoDB*: Cơ sở dữ liệu NoSQL lưu trữ thông tin người dùng, resume và lịch sử đánh giá (5 bảng).
+- *AWS Lambda*: Xử lý logic nghiệp vụ (5 services: User, Resume, Cover Letter, Interview, Industry) trên môi trường Java Spring.
+- *Amazon DynamoDB*: Cơ sở dữ liệu NoSQL lưu trữ thông tin người dùng, resume và lịch sử đánh giá (1 bảng).
 - *Amazon Bedrock*: Cung cấp các mô hình nền tảng (Claude 3 Haiku/Sonnet) để phân tích và tạo nội dung. 
 
 *Thiết kế thành phần*
 - *Giao diện người dùng (Frontend)*: Ứng dụng Next.js Single Page Application (SPA) tương tác với backend thông qua RESTful API.
 - *Quản lý truy cập*: Amazon Cognito (User Pool) xác thực người dùng và cấp JWT Token cho các API request.
 - *Xử lý trung tâm*: AWS Lambda thực thi các hàm Spring Cloud Function, kết nối với Bedrock để xử lý các tác vụ thông minh (tạo quiz, sửa CV).
-- *Lớp dữ liệu*: DynamoDB sử dụng thiết kế đa bảng (Multi-table) để đảm bảo phân tách dữ liệu rõ ràng và truy xuất nhanh.
+- *Lớp dữ liệu*: DynamoDB được tổ chức theo mô hình "một bảng" (single-table) để tối ưu hoá việc tổ chức dữ liệu và cho phép truy vấn hiệu quả.
 - *Trí tuệ nhân tạo*: Amazon Bedrock nhận ngữ cảnh từ Lambda, thực hiện suy luận (Inference) và trả về kết quả tư vấn hoặc nội dung văn bản. 
 
 ### 4. Triển khai kỹ thuật

@@ -29,6 +29,8 @@ Typically, and as a standard, a worklog is carried out over about 3 months (thro
 
 **Week 10:** [Mastering Amazon DynamoDB from advanced design patterns to Serverless and AI integration, alongside practicing system cost optimization and automated deployment of the TravelBuddy application on Elastic Beanstalk](1.10-week10/)
 
-**Week 11:** [Doing task M...](1.11-week11/)
+**Week 11:** [Focus on designing the Serverless architecture, DynamoDB data model, and user interface, while setting up the development environment and basic AWS SAM infrastructure.](1.11-week11/)
 
-**Week 12:** [Doing task N...](1.12-week12/)
+**Week 12:** [Develop and deploy the complete Backend with AWS Lambda (Java), integrate Amazon Bedrock AI for content processing, and finalize database interactions.](1.12-week12/)
+
+**Week 13:** [Build the complete React Frontend, integrate authentication and Backend APIs, then package and deploy the entire system to the live environment ready for demonstration.](1.13-Week13/)

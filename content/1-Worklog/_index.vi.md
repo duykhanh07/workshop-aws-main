@@ -29,6 +29,8 @@ Thông thường và cũng là tiêu chuẩn, một worklog được thực hi�
 
 **Tuần 10:** [Hiểu Amazon DynamoDB từ các mô hình thiết kế nâng cao đến tích hợp Serverless và AI, song song với việc thực hành tối ưu hóa chi phí hệ thống và triển khai tự động ứng dụng TravelBuddy trên Elastic Beanstalk](1.10-week10/)
 
-**Tuần 11:** [Làm công việc M...](1.11-week11/)
+**Tuần 11:** [Tập trung thiết kế kiến trúc hệ thống Serverless, mô hình dữ liệu DynamoDB và giao diện người dùng, đồng thời thiết lập môi trường phát triển và hạ tầng AWS SAM cơ bản.](1.11-week11/)
 
-**Tuần 12:** [Làm công việc N...](1.12-week12/)
+**Tuần 12:** [Phát triển và triển khai Backend hoàn chỉnh với AWS Lambda (Java), tích hợp trí tuệ nhân tạo Amazon Bedrock để xử lý nội dung và hoàn thiện tương tác với cơ sở dữ liệu.](1.12-week12/)
+
+**Tuần 13:** [Xây dựng hoàn thiện Frontend React, tích hợp xác thực và API Backend, sau đó đóng gói và triển khai toàn bộ hệ thống lên môi trường Internet để sẵn sàng demo.](1.13-Week13/)

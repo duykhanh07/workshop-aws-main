@@ -33,18 +33,18 @@ The platform applies a fully AWS Serverless architecture to optimize scalability
 ![AI Career Coach Architecture](/images/2-Proposal/AI_Career_Coach_Architecture.png)
 
 *AWS Services Used*
-- *Amazon CloudFront & S3*: Store and distribute Web interface (Next.js) with low latency.
+- *Amazon CloudFront & S3*: Store and distribute Web interface with low latency.
 - *Amazon Cognito*: Manage identity, sign-up/sign-in, and secure user authentication.
 - *Amazon API Gateway*: REST API gateway managing traffic and routing requests to the correct Lambda Service.
-- *AWS Lambda*: Handle business logic (4 services: User, Resume, Cover Letter, Interview) on Java Spring environment.
-- *Amazon DynamoDB*: NoSQL database storing user information, resumes, and assessment history (5 tables).
+- *AWS Lambda*: Handle business logic (5 services: User, Resume, Cover Letter, Interview, Industry) on Java Spring environment.
+- *Amazon DynamoDB*: NoSQL database storing user information, resumes, and assessment history (1 tables).
 - *Amazon Bedrock*: Provide foundation models (Claude 3 Haiku/Sonnet) to analyze and generate content. 
 
 *Component Design*
 - *User Interface (Frontend)*: Next.js Single Page Application (SPA) interacting with backend through RESTful APIs.
 - *Access Management*: Amazon Cognito (User Pool) authenticates users and issues JWT Tokens for API requests.
 - *Central Processing*: AWS Lambda executes Spring Cloud Function functions, connecting with Bedrock to handle intelligent tasks (creating quizzes, fixing CVs).
-- *Data Layer*: DynamoDB uses Multi-table design to ensure clear data separation and fast retrieval.
+- *Data Layer*: DynamoDB is organized using a 'single-table' design to optimize data organization and enable efficient querying.
 - *Artificial Intelligence*: Amazon Bedrock receives context from Lambda, performs inference, and returns consultation results or text content. 
 
 ### 4. Technical Implementation

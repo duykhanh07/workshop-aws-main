@@ -1,58 +1,30 @@
 ---
 title: "Worklog Tuần 12"
 #date: "`r Sys.Date()`"
-weight: 2
+weight: 12
 chapter: false
 pre: " <b> 1.12 </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 ### Mục tiêu tuần 12:
-
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Xây dựng hoàn thiện 5 Lambda Functions sử dụng Java Spring Cloud Function.
+* Triển khai tầng Repository tương tác với DynamoDB (Enhanced Client).
+* Tích hợp AWS SDK v2 để gọi Amazon Bedrock (Claude 3 Haiku) cho các tính năng AI.
+* Xử lý các vấn đề kỹ thuật chuyên sâu: Prompt Engineering, JSON Serialization (ObjectMapper), Error Handling.
+* Deploy Backend lên AWS và kiểm thử API qua Postman.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| :---: | --- | :---: | :---: | --- |
+| 2 | <br>- Tạo UserEntity & UserRepository.<br>- Viết logic CRUD thông tin người dùng.<br>- Tích hợp logic xác thực JWT từ Cognito trong Lambda.<br>- Xử lý logic Onboarding cho người dùng mới.<br>- Deploy thử nghiệm Lambda đầu tiên với SAM. | 24/11/2025 | 24/11/2025 | |
+| 3 | - Tạo ResumeEntity & ResumeRepository.<br>- Viết logic lưu/lấy nội dung Markdown từ DynamoDB.<br>- Cấu hình ObjectMapper thủ công để xử lý lỗi JSON Serialization (tránh lỗi object rỗng).<br>- Viết Unit Test cho tầng Service. | 25/11/2025 | 25/11/2025 |  |
+| 4 | - Cấu hình BedrockRuntimeClient trong Java.<br>- Viết Service improveWithAI: Gửi text thô -> Nhận text đã sửa.<br>- Thực hiện Prompt Engineering để tối ưu kết quả từ Claude 3.<br>- Xử lý Exception và Timeout khi gọi AI. | 26/11/2025 | 26/11/2025 |  |
+| 5 | - **CoverLetter:** Viết Prompt tạo thư xin việc dựa trên JD và Profile.<br>- **Interview:** Viết logic sinh câu hỏi trắc nghiệm (Generate Quiz).<br>- **Interview:** Xử lý Prompt để bắt AI trả về đúng định dạng JSON Array.<br>- **Interview:** Viết logic lưu điểm số (Save Result) vào DynamoDB. | 27/11/2025 | 27/11/2025 |  |
+| 6 | - Xây dựng IndustryInsightFunction (Optional - Cache strategy).<br>- Review và Refactor code (Clean Code).<br>- Build toàn bộ project (`mvn clean package`).<br>- Chạy `sam deploy` để đẩy toàn bộ Backend lên AWS.<br>- Test toàn bộ API Endpoints bằng Postman/Curl. | 28/11/2025 | 28/11/2025 |  |
 
 ### Kết quả đạt được tuần 12:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* 5 Lambda Functions hoạt động ổn định trên AWS.
+* API Gateway đã public các endpoints cần thiết.
+* Tích hợp thành công Amazon Bedrock để sinh nội dung CV, Cover Letter và Quiz.
+* Dữ liệu được lưu trữ và truy xuất chính xác từ DynamoDB.
+* Khắc phục được các lỗi liên quan đến JSON Serialization trong môi trường Serverless.

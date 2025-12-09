@@ -6,237 +6,125 @@ chapter : false
 pre : " <b> 5.2. </b> "
 ---
 
-#### IAM permissions
-Gắn IAM permission policy sau vào tài khoản aws user của bạn để triển khai và dọn dẹp tài nguyên trong workshop này.
-```
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": [
-                "cloudformation:*",
-                "cloudwatch:*",
-                "ec2:AcceptTransitGatewayPeeringAttachment",
-                "ec2:AcceptTransitGatewayVpcAttachment",
-                "ec2:AllocateAddress",
-                "ec2:AssociateAddress",
-                "ec2:AssociateIamInstanceProfile",
-                "ec2:AssociateRouteTable",
-                "ec2:AssociateSubnetCidrBlock",
-                "ec2:AssociateTransitGatewayRouteTable",
-                "ec2:AssociateVpcCidrBlock",
-                "ec2:AttachInternetGateway",
-                "ec2:AttachNetworkInterface",
-                "ec2:AttachVolume",
-                "ec2:AttachVpnGateway",
-                "ec2:AuthorizeSecurityGroupEgress",
-                "ec2:AuthorizeSecurityGroupIngress",
-                "ec2:CreateClientVpnEndpoint",
-                "ec2:CreateClientVpnRoute",
-                "ec2:CreateCustomerGateway",
-                "ec2:CreateDhcpOptions",
-                "ec2:CreateFlowLogs",
-                "ec2:CreateInternetGateway",
-                "ec2:CreateLaunchTemplate",
-                "ec2:CreateNetworkAcl",
-                "ec2:CreateNetworkInterface",
-                "ec2:CreateNetworkInterfacePermission",
-                "ec2:CreateRoute",
-                "ec2:CreateRouteTable",
-                "ec2:CreateSecurityGroup",
-                "ec2:CreateSubnet",
-                "ec2:CreateSubnetCidrReservation",
-                "ec2:CreateTags",
-                "ec2:CreateTransitGateway",
-                "ec2:CreateTransitGatewayPeeringAttachment",
-                "ec2:CreateTransitGatewayPrefixListReference",
-                "ec2:CreateTransitGatewayRoute",
-                "ec2:CreateTransitGatewayRouteTable",
-                "ec2:CreateTransitGatewayVpcAttachment",
-                "ec2:CreateVpc",
-                "ec2:CreateVpcEndpoint",
-                "ec2:CreateVpcEndpointConnectionNotification",
-                "ec2:CreateVpcEndpointServiceConfiguration",
-                "ec2:CreateVpnConnection",
-                "ec2:CreateVpnConnectionRoute",
-                "ec2:CreateVpnGateway",
-                "ec2:DeleteCustomerGateway",
-                "ec2:DeleteFlowLogs",
-                "ec2:DeleteInternetGateway",
-                "ec2:DeleteNetworkInterface",
-                "ec2:DeleteNetworkInterfacePermission",
-                "ec2:DeleteRoute",
-                "ec2:DeleteRouteTable",
-                "ec2:DeleteSecurityGroup",
-                "ec2:DeleteSubnet",
-                "ec2:DeleteSubnetCidrReservation",
-                "ec2:DeleteTags",
-                "ec2:DeleteTransitGateway",
-                "ec2:DeleteTransitGatewayPeeringAttachment",
-                "ec2:DeleteTransitGatewayPrefixListReference",
-                "ec2:DeleteTransitGatewayRoute",
-                "ec2:DeleteTransitGatewayRouteTable",
-                "ec2:DeleteTransitGatewayVpcAttachment",
-                "ec2:DeleteVpc",
-                "ec2:DeleteVpcEndpoints",
-                "ec2:DeleteVpcEndpointServiceConfigurations",
-                "ec2:DeleteVpnConnection",
-                "ec2:DeleteVpnConnectionRoute",
-                "ec2:Describe*",
-                "ec2:DetachInternetGateway",
-                "ec2:DisassociateAddress",
-                "ec2:DisassociateRouteTable",
-                "ec2:GetLaunchTemplateData",
-                "ec2:GetTransitGatewayAttachmentPropagations",
-                "ec2:ModifyInstanceAttribute",
-                "ec2:ModifySecurityGroupRules",
-                "ec2:ModifyTransitGatewayVpcAttachment",
-                "ec2:ModifyVpcAttribute",
-                "ec2:ModifyVpcEndpoint",
-                "ec2:ReleaseAddress",
-                "ec2:ReplaceRoute",
-                "ec2:RevokeSecurityGroupEgress",
-                "ec2:RevokeSecurityGroupIngress",
-                "ec2:RunInstances",
-                "ec2:StartInstances",
-                "ec2:StopInstances",
-                "ec2:UpdateSecurityGroupRuleDescriptionsEgress",
-                "ec2:UpdateSecurityGroupRuleDescriptionsIngress",
-                "iam:AddRoleToInstanceProfile",
-                "iam:AttachRolePolicy",
-                "iam:CreateInstanceProfile",
-                "iam:CreatePolicy",
-                "iam:CreateRole",
-                "iam:DeleteInstanceProfile",
-                "iam:DeletePolicy",
-                "iam:DeleteRole",
-                "iam:DeleteRolePolicy",
-                "iam:DetachRolePolicy",
-                "iam:GetInstanceProfile",
-                "iam:GetPolicy",
-                "iam:GetRole",
-                "iam:GetRolePolicy",
-                "iam:ListPolicyVersions",
-                "iam:ListRoles",
-                "iam:PassRole",
-                "iam:PutRolePolicy",
-                "iam:RemoveRoleFromInstanceProfile",
-                "lambda:CreateFunction",
-                "lambda:DeleteFunction",
-                "lambda:DeleteLayerVersion",
-                "lambda:GetFunction",
-                "lambda:GetLayerVersion",
-                "lambda:InvokeFunction",
-                "lambda:PublishLayerVersion",
-                "logs:CreateLogGroup",
-                "logs:DeleteLogGroup",
-                "logs:DescribeLogGroups",
-                "logs:PutRetentionPolicy",
-                "route53:ChangeTagsForResource",
-                "route53:CreateHealthCheck",
-                "route53:CreateHostedZone",
-                "route53:CreateTrafficPolicy",
-                "route53:DeleteHostedZone",
-                "route53:DisassociateVPCFromHostedZone",
-                "route53:GetHostedZone",
-                "route53:ListHostedZones",
-                "route53domains:ListDomains",
-                "route53domains:ListOperations",
-                "route53domains:ListTagsForDomain",
-                "route53resolver:AssociateResolverEndpointIpAddress",
-                "route53resolver:AssociateResolverRule",
-                "route53resolver:CreateResolverEndpoint",
-                "route53resolver:CreateResolverRule",
-                "route53resolver:DeleteResolverEndpoint",
-                "route53resolver:DeleteResolverRule",
-                "route53resolver:DisassociateResolverEndpointIpAddress",
-                "route53resolver:DisassociateResolverRule",
-                "route53resolver:GetResolverEndpoint",
-                "route53resolver:GetResolverRule",
-                "route53resolver:ListResolverEndpointIpAddresses",
-                "route53resolver:ListResolverEndpoints",
-                "route53resolver:ListResolverRuleAssociations",
-                "route53resolver:ListResolverRules",
-                "route53resolver:ListTagsForResource",
-                "route53resolver:UpdateResolverEndpoint",
-                "route53resolver:UpdateResolverRule",
-                "s3:AbortMultipartUpload",
-                "s3:CreateBucket",
-                "s3:DeleteBucket",
-                "s3:DeleteObject",
-                "s3:GetAccountPublicAccessBlock",
-                "s3:GetBucketAcl",
-                "s3:GetBucketOwnershipControls",
-                "s3:GetBucketPolicy",
-                "s3:GetBucketPolicyStatus",
-                "s3:GetBucketPublicAccessBlock",
-                "s3:GetObject",
-                "s3:GetObjectVersion",
-                "s3:GetBucketVersioning",
-                "s3:ListAccessPoints",
-                "s3:ListAccessPointsForObjectLambda",
-                "s3:ListAllMyBuckets",
-                "s3:ListBucket",
-                "s3:ListBucketMultipartUploads",
-                "s3:ListBucketVersions",
-                "s3:ListJobs",
-                "s3:ListMultipartUploadParts",
-                "s3:ListMultiRegionAccessPoints",
-                "s3:ListStorageLensConfigurations",
-                "s3:PutAccountPublicAccessBlock",
-                "s3:PutBucketAcl",
-                "s3:PutBucketPolicy",
-                "s3:PutBucketPublicAccessBlock",
-                "s3:PutObject",
-                "secretsmanager:CreateSecret",
-                "secretsmanager:DeleteSecret",
-                "secretsmanager:DescribeSecret",
-                "secretsmanager:GetSecretValue",
-                "secretsmanager:ListSecrets",
-                "secretsmanager:ListSecretVersionIds",
-                "secretsmanager:PutResourcePolicy",
-                "secretsmanager:TagResource",
-                "secretsmanager:UpdateSecret",
-                "sns:ListTopics",
-                "ssm:DescribeInstanceProperties",
-                "ssm:DescribeSessions",
-                "ssm:GetConnectionStatus",
-                "ssm:GetParameters",
-                "ssm:ListAssociations",
-                "ssm:ResumeSession",
-                "ssm:StartSession",
-                "ssm:TerminateSession"
-            ],
-            "Resource": "*"
-        }
-    ]
-}
+Để xây dựng và triển khai ứng dụng **AI Career Coach**, chúng ta cần thiết lập một môi trường phát triển mạnh mẽ. Hãy đảm bảo bạn cài đặt đầy đủ các công cụ dưới đây trước khi bước vào phần code.
 
+{{% notice note %}}
+ℹ️ **Lưu ý quan trọng:** Dự án này yêu cầu bạn phải có tài khoản AWS (Amazon Web Services). Nếu chưa có, hãy đăng ký một tài khoản [tại đây](https://aws.amazon.com/free/). Tài khoản Free Tier là đủ để thực hiện workshop này.
+{{% /notice %}}
+
+---
+
+## 1. Cài đặt Runtime (Ngôn ngữ lập trình)
+
+### A. Java 17 (JDK)
+Backend của chúng ta sử dụng Spring Boot 3, yêu cầu tối thiểu là Java 17.
+
+1.  **Tải xuống:** Truy cập [Oracle JDK 17](https://www.oracle.com/java/technologies/downloads/#java17) hoặc [Amazon Corretto 17](https://aws.amazon.com/corretto/).
+2.  **Cài đặt:** Chạy file cài đặt theo hệ điều hành của bạn (Windows/Mac/Linux).
+3.  **Kiểm tra:** Mở Terminal (hoặc CMD/PowerShell) và gõ lệnh:
+
+```bash
+java -version
+```
+Kết quả mong đợi: Bạn sẽ thấy phiên bản hiển thị là 17.x.x.
+
+### B. Node.js & npm
+Frontend React (Vite) cần môi trường Node.js.
+
+1. **Tải xuống:** Truy cập Node.js và tải bản LTS (Long Term Support) (ví dụ: v18 hoặc v20).
+2. **Kiểm tra:** Mở Terminal (hoặc CMD/PowerShell) và gõ lệnh:
+```bash
+node -v
+npm -v
 ```
 
-#### Khởi tạo tài nguyên bằng CloudFormation
+---
 
-Trong lab này, chúng ta sẽ dùng N.Virginia region (us-east-1).
+## 2. Cài đặt bộ công cụ AWS
+Đây là những công cụ giúp chúng ta giao tiếp với AWS Cloud và triển khai ứng dụng Serverless.
 
-Để chuẩn bị cho môi trường làm workshop, chúng ta deploy CloudFormation template sau (click link): [PrivateLinkWorkshop ](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https://s3.us-east-1.amazonaws.com/reinvent-endpoints-builders-session/Nested.yaml&stackName=PLCloudSetup). Để nguyên các lựa chọn mặc định.
+### A. AWS CLI (Command Line Interface)
+Công cụ dòng lệnh chính thức của AWS.
 
-![create stack](/images/5-Workshop/5.2-Prerequisite/create-stack1.png)
+* Windows: Tải file MSI installer [tại đây.](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+* MacOS: Tải file PKG [tại đây.](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+* Linux: Xem hướng dẫn chi tiết [tại đây.](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
-+ Lựa chọn 2 mục acknowledgement 
-+ Chọn Create stack
+Kiểm tra cài đặt:
 
-![create stack](/images/5-Workshop/5.2-Prerequisite/create-stack2.png)
+```bash
+aws --version
+```
+### B. AWS SAM CLI (Serverless Application Model)
+Công cụ giúp xây dựng, test và deploy ứng dụng Serverless (Lambda, DynamoDB...) dễ dàng hơn.
 
-Quá trình triển khai CloudFormation cần khoảng 15 phút để hoàn thành.
+* Hướng dẫn cài đặt: [Xem tài liệu chính thức của AWS SAM](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html)
+* Kiểm tra cài đặt:
+```
+sam --version
+```
 
-![complete](/images/5-Workshop/5.2-Prerequisite/complete.png)
+---
 
-+ 2 VPCs đã được tạo
+## 3. Cấu hình AWS Credentials
+Sau khi cài AWS CLI, bạn cần kết nối nó với tài khoản AWS của mình thông qua Access Key.
 
-![vpcs](/images/5-Workshop/5.2-Prerequisite/vpcs.png)
+**Bước 1: Tạo Access Key**
+* Đăng nhập vào AWS Console.
+* Tìm dịch vụ IAM -> Chọn Users -> Chọn User của bạn (hoặc tạo mới).
+* Vào tab Security credentials -> Bấm Create access key.
+* Chọn Use case: Command Line Interface (CLI).
+* Tải file .csv chứa Access Key ID và Secret Access Key về máy.
 
-+ 3 EC2s đã được tạo
+**Bước 2: Cấu hình trên máy**
 
-![EC2](/images/5-Workshop/5.2-Prerequisite/ec2.png)
+Mở Terminal và chạy lệnh:
+
+```
+aws configure
+```
+Nhập lần lượt các thông tin:
+
+* AWS Access Key ID: [Paste Key ID của bạn]
+* AWS Secret Access Key: [Paste Secret Key của bạn]
+* Default region name: ap-southeast-1 (Singapore) (Hoặc region gần bạn nhất)
+* Default output format: json
+
+---
+
+## 4. Kích hoạt Model AI (Quan trọng)
+Dự án sử dụng mô hình Claude 3 Haiku của Anthropic thông qua Amazon Bedrock. Mặc định, quyền truy cập này bị tắt.
+
+1. Đăng nhập AWS Console, tìm dịch vụ Amazon Bedrock.
+2. Đảm bảo bạn đang ở đúng Region đã cấu hình (ví dụ: Singapore).
+3. Ở menu bên trái, chọn Model catalog.
+4. Tìm nhà cung cấp Anthropic.
+{{% notice note  %}}
+ℹ️ **Lưu ý:**  Bạn cần nộp form "Use Case Details" trước. Điền thông tin là "Personal Project" cho mục đích học tập
+{{% /notice %}}
+5. Tick chọn Claude 3 Haiku.
+6. Nếu **Open in playground** có màu cam thì đã sử dụng được.
+
+![claude 3](/images/5-Workshop/5.2-Prerequisite/claude-3.png)
+
+---
+
+## 5. IDE & Extensions (Khuyên dùng)
+Để code hiệu quả nhất, bạn nên sử dụng Visual Studio Code (VS Code) hoặc IntelliJ IDEA.
+
+Nếu dùng VS Code, hãy cài đặt các Extensions sau:
+
+* Extension Pack for Java: Hỗ trợ code Java/Spring Boot.
+* ES7+ React/Redux/React-Native snippets: Hỗ trợ code React nhanh.
+* AWS Toolkit: Quản lý tài nguyên AWS ngay trong VS Code.
+* YAML: Hỗ trợ highlight cú pháp cho file template.yaml.
+
+---
+
+✅ Checklist kiểm tra
+Trước khi sang bài tiếp theo, hãy chắc chắn bạn đã tích đủ các mục sau:
+* Đã cài Java 17 (`java -version`).
+* Đã cài Node.js (`node -v`).
+* Đã cài AWS SAM CLI (`sam --version`).
+* Đã chạy aws configure thành công.
+* Đã thấy Open in playground cho Claude 3 Haiku trên AWS Bedrock.

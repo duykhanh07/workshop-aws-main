@@ -1,59 +1,31 @@
 ---
 title: "Worklog Tuần 11"
 #date: "`r Sys.Date()`"
-weight: 2
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
 ### Mục tiêu tuần 11:
-
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hoàn thiện thiết kế kiến trúc hệ thống Serverless trên AWS (S3, CloudFront, API Gateway, Lambda, DynamoDB).
+* Thiết kế cơ sở dữ liệu DynamoDB theo mô hình Single Table Design (Access Patterns, PK/SK Design).
+* Thiết kế giao diện (UI/UX) cho các trang chức năng chính: Dashboard, Resume Builder, Mock Interview.
+* Khởi tạo cấu trúc dự án Monorepo (Backend Java Spring Cloud & Frontend React Vite).
+* Thiết lập Infrastructure as Code (IaC) với AWS SAM (template.yaml) và cấu hình quyền IAM/Bedrock.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| :---: | --- | :---: | :---: | --- |
+| 2 |- Vẽ sơ đồ luồng dữ liệu (Data Flow): User -> CloudFront -> API Gateway -> Lambda.<br>- Xác định các dịch vụ AWS cần thiết: Bedrock (Claude 3), Cognito, DynamoDB.<br>- Phân tích yêu cầu nghiệp vụ cho 4 module chính: Resume, Cover Letter, Interview, Industry Insight.<br>- Lên danh sách các API Endpoints cần thiết. | 17/11/2025 | 17/11/2025 |  |
+| 3 | - Định nghĩa các Entity: User, Resume, Assessment, CoverLetter.<br>- Xác định Access Patterns (Cách query dữ liệu).<br>- Thiết kế Partition Key (PK) và Sort Key (SK) cho từng Entity (VD: USER#{id}, METADATA, RESUME, LETTER#uuid).<br>- Thiết kế Global Secondary Index (GSI) nếu cần. | 18/11/2025 | 18/11/2025 | |
+| 4 | - Thiết kế luồng đăng nhập/đăng ký với Cognito.<br>- Phác thảo giao diện Dashboard thống kê.<br>- Thiết kế giao diện Resume Builder (chia đôi màn hình: Form & Preview).<br>- Thiết kế giao diện Mock Interview (Quiz form).<br>- Lựa chọn bộ thư viện UI: Tailwind CSS, Shadcn UI, Lucide Icons. | 19/11/2025 | 19/11/2025 |  |
+| 5 | - Cài đặt môi trường: Java 17, Maven, Node.js, AWS CLI, SAM CLI.<br>- Khởi tạo cấu trúc Backend: Spring Boot 3 + Spring Cloud Function.<br>- Khởi tạo cấu trúc Frontend: React + Vite.<br>- Cấu hình Git Repository và cấu trúc thư mục Monorepo. | 20/11/2025 | 20/11/2025 | |
+| 6 | - Tạo file template.yaml.<br>- Khai báo tài nguyên DynamoDB Table (PAY_PER_REQUEST).<br>- Khai báo Cognito User Pool & Client.<br>- Khai báo S3 Bucket & CloudFront Origin Access Control (OAC).<br>- Cấu hình IAM Policies cho Lambda (quyền gọi Bedrock & DynamoDB).<br>- Đăng ký Model Access (Claude 3 Haiku) trên AWS Bedrock. | 21/11/2025 | 21/11/2025 |  |
 
 ### Kết quả đạt được tuần 11:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
+* Bản thiết kế kiến trúc hệ thống Serverless hoàn chỉnh.
+* Schema thiết kế DynamoDB Single Table sẵn sàng cho việc code.
+* Môi trường phát triển (Dev Environment) đã được cài đặt đầy đủ.
+* File template.yaml của AWS SAM đã sẵn sàng để deploy hạ tầng cơ bản.
+* Quyền truy cập model AI Claude 3 trên AWS Bedrock đã được kích hoạt.
 
